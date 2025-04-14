@@ -47,8 +47,7 @@ void Start()
 
     GameManager.instance.cardCnt = arr.Length;
 }
-\```
----
+
 
 ## 🔍 카드 판별 요약
 
