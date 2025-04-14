@@ -93,7 +93,7 @@ public void Matched()
     firstCard = null;
     secondCard = null;
 }
-
+```
 ---
 
 ## 💡 향후 개선 아이디어
