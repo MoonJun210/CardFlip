@@ -12,9 +12,13 @@ public class Card : MonoBehaviour
 
     public Animator anim;
 
+    AudioSource audioSource;
+    public AudioClip clip;
+
+
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,6 +35,9 @@ public class Card : MonoBehaviour
 
     public void OpenCard()
     {
+        if (GameManager.instance.secondCard != null) return;
+
+        audioSource.PlayOneShot(clip);
         anim.SetBool("isOpen", true);
         front.SetActive(true);
         back.SetActive(false);
